@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Zodiac</title>
+<meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
+<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+<div class="main">
+<div class="image-container">image</div>
+
+<div class="form-container">
+<h1>WHO YOU ARE ACCORDING TO YOUR ZODIAC SIGN</h1>
+<form class="form">
+<label>Your day:</label>
+<input type="" id="day" name="day">
+<label>Your month:</label>
+<input type="" id="month" name="month">
+<a class="submit" href="javascript: myFunction()">Submit</a>
+<div id="zodiac-description"></div>
+</form>
+</div>
+</div>
+
+
+<script>
+  function myFunction() {
+  var day = document.getElementById("day").value; 
+  var month = document.getElementById("month").value;
+  if(day>31 || day<1)
+  {
+    alert('Invalid date Input!');
+  }
+  if(month>12 || month<1)
+  {
+    alert('Invalid month Input!');
+  }
+  var info;
+  var text;
+  if((month==1 && (day>=20 && day<=31))||(month==2 && (day>=1 && day<=18))){
+      info="Aquarius";
+  }else if((month==2 && (day>=19 && day<=28))||(month==3 && (day>=1 && day<=20))){
+      info="Pisces";
+  }else if((month==3 && (day>=21 && day<=31))||(month==4 && (day>=1 && day<=19))){
+      info="Aries";
+  }else if((month==4 && (day>=20 && day<=30))||(month==5 && (day>=1 && day<=20))){
+      info="Taurus";
+  }else if((month==5 && (day>=21 && day<=31))||(month==6 && (day>=1 && day<=20))){
+      info="Gemini";
+  }else if((month==6 && (day>=21 && day<=30))||(month==7 && (day>=1 && day<=22))){
+      info="Cancer";
+  }else if((month==7 && (day>=23 && day<=31))||(month==8 && (day>=1 && day<=22))){
+      info="Leo";
+  }else if((month==8 && (day>=23 && day<=31))||(month==9 && (day>=1 && day<=22))){
+      info="Virgos";
+  }else if((month==9 && (day>=23 && day<=30))||(month==10 && (day>=1 && day<=22))){
+      info="Libra";
+  }else if((month==10 && (day>=23 && day<=31))||(month==11 && (day>=1 && day<=21))){
+      info="Scorpio";
+  }else if((month==11 && (day>=22 && day<=30))||(month==12 && (day>=1 && day<=21))){
+      info="Sagittarius";
+  }else if((month==12 && (day>=22 && day<=31))||(month==1 && (day>=1 && day<=19))){
+      info="Capricorn";
+  }else{
+    text="Sorry unable to give you information";
+  }
+
+  switch(info)
+  {
+    case "Aquarius":
+      text="<b>Strengths:</b> Progressive, original, independent, humanitarian. <br><b>Weaknesses: </b>Runs from emotional expression, temperamental, uncompromising, aloof. <br><b>Aquarius likes:</b> Fun with friends, helping others, fighting for causes, intellectual conversation, a good listener. <br><b>Aquarius dislikes: </b>Limitations, broken promises, being lonely, dull or boring situations, people who disagree with them.";
+
+         
+      break;
+
+    case "Pisces":
+      text= "Strengths: Compassionate, artistic, intuitive, gentle, wise, musical Weaknesses: Fearful, overly trusting, sad, desire to escape reality, can be a victim or a martyr Pisces likes: Being alone, sleeping, music, romance, visual media, swimming, spiritual themes.<br><b> Pisces dislikes:</b> Know-it-all, being criticized, the past coming back to haunt, cruelty of any kind.<img src="/home/pif/Desktop/zodiac sign1/pisces.jpg"> ";
+
+    case "Aries":
+      text="<b>Strengths:</b> Courageous, determined, confident, enthusiastic, optimistic, honest, passionate.<br><b> Weaknesses: </b>Impatient, moody, short-tempered, impulsive, aggressive.<br><b> Aries likes:</b> Comfortable clothes, taking on leadership roles, physical challenges, individual sports.<br><b> Aries dislikes: Inactivity, delays, work that does not use one's talents.";
+      break;
+
+    case "Taurus":
+      text="<b>Strengths:</b> Reliable, patient, practical, devoted, responsible, stable.<br><b> Weaknesses:</b> Stubborn, possessive, uncompromising.<br><b> Taurus likes:</b> Gardening, cooking, music, romance, high quality clothes, working with hands.<br><b> Taurus dislikes:</b> Sudden changes, complications, insecurity of any kind, synthetic fabrics.";
+      break;
+
+    case "Gemini":
+      text="<b>Strengths:</b> Gentle, affectionate, curious, adaptable, ability to learn quickly and exchange ideas.<br><b> Weaknesses: <b> Nervous, inconsistent, indecisive.<br><b> Gemini likes:</b> Music, books, magazines, chats with nearly anyone, short trips around the town.<br><b> Gemini dislikes:</b> Being alone, being confined, repetition and routine.";
+      break;
+
+    case "Cancer":
+      text="<b>Strengths:</b> Tenacious, highly imaginative, loyal, emotional, sympathetic, persuasive.<br><b>Weaknesses:</b> Moody, pessimistic, suspicious, manipulative, insecure.<br><b> Cancer likes:</b> Art, home-based hobbies, relaxing near or in water, helping loved ones, a good meal with friends.<br><b> Cancer dislikes:</b> Strangers, any criticism of Mom, revealing of personal life.";
+      break;
+
+    case "Leo":
+      text="<b>Strengths:</b> Creative, passionate, generous, warm-hearted, cheerful, humorous.<br><b> Weaknesses:</b> Arrogant, stubborn, self-centered, lazy, inflexible.<br><b> Leo likes:</b> Theater, taking holidays, being admired, expensive things, bright colors, fun with friends.<br><b> Leo dislikes:</b> Being ignored, facing difficult reality, not being treated like a king or queen.";
+      break;
+
+    case "Virgo":
+      text="<b>Strengths:</b>Loyal, analytical, kind, hardworking, practical.<br><b> Weaknesses:</b> Shyness, worry, overly critical of self and others, all work and no play.<br><b> Virgo likes:</b> Animals, healthy food, books, nature, cleanliness Virgo.<br><b>dislikes: Rudeness, asking for help, taking center stage.";
+      break;
+
+    case "Libra":
+      text="<b>Strengths:</b> Cooperative,diplomatic, gracious, fair-minded, social.<br><b>Weaknesses:</b> Indecisive, avoids confrontations, will carry a grudge, self-pity. <br><b>Libra likes:</b> Harmony, gentleness, sharing with others, the outdoors.<br><b> Libra dislikes:</b> Violence, injustice, loudmouths, conformity.";
+      break;
+
+    case "Scorpio":
+      text="<b>Strengths:</b> Resourceful, brave, passionate, stubborn, a true friend. <br><b>Weaknesses:</b> Distrusting, jealous, secretive, violent Scorpio likes: Truth, facts, being right, longtime friends, teasing, a grand passion.<br><b>Scorpio dislikes:</b> Dishonesty, revealing secrets, passive people.";
+      break;
+
+    case "Sagittarius":
+      text="<b>Strengths:</b> Generous, idealistic, great sense of humor .<br><b>Weaknesses:</b> Promises more than can deliver, very impatient, will say anything no matter how undiplomatic.<br><b> Sagittarius likes:</b> Freedom, travel, philosophy, being outdoors. <br><b>Sagittarius dislikes: </b>Clingy people, being constrained, off-the-wall theories, details.";
+      break;
+
+    case "Capricorn":
+      text="<b>Strengths:</b> Responsible, disciplined, self-control, good managers. <br><b>Weaknesses: </b>Know-it-all, unforgiving, condescending, expecting the worst. <br><b>Capricorn likes: </b>Family, tradition, music, understated status, quality craftsmanship.<br><b> Capricorn dislikes: </b>Almost everything at some point.";
+      break;  
+  }
+
+
+   document.getElementById("zodiac-description").innerHTML = text;
+  }
+</script>
+
+</body>
+</html>
+
